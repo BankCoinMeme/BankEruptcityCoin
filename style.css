@@ -1,0 +1,234 @@
+/* GLOBAL RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY DEFAULT */
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  overflow-x: hidden; /* Helps hide any horizontal overflow from animations */
+}
+
+/* MONEY RAIN CONTAINER */
+#money-rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So user can click elements underneath */
+  z-index: 9999;
+}
+
+/* TOP SECTION */
+.top-image-container {
+  margin-top: 2in; /* 2 inches from the top as requested */
+  text-align: center;
+}
+
+.bank-image {
+  width: 200px;
+  height: auto;
+}
+
+/* ANIMATED TITLE */
+.animated-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FF0000;
+  animation: colorCycle 3s infinite alternate;
+}
+
+/* Example color cycling animation */
+@keyframes colorCycle {
+  0%   { color: #FF0000; }
+  50%  { color: #FFA500; }
+  100% { color: #008000; }
+}
+
+/* CREATORS SECTION */
+.creators-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+/* Two columns for creators: left column has 2 squares, right column has 1 square */
+.creator-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.creator-box {
+  text-align: center;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  width: 200px; /* Adjust for your desired square size */
+}
+
+.creator-box img {
+  width: 100%;
+  height: auto;
+}
+
+.creator-box h3 {
+  margin: 0.5rem 0;
+}
+
+/* ROADMAP SECTION */
+.roadmap-section {
+  background-color: #ffeb99; /* You can pick a color that matches road.png or remove it */
+  padding: 2rem;
+  text-align: center;
+}
+
+.road-image {
+  max-width: 300px; /* Adjust if you want the road bigger/smaller */
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto; 
+}
+
+/* MILE MARKER */
+.mile-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.marker-image {
+  width: 150px;
+  height: auto;
+}
+
+.mile-marker-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffd700; /* gold color */
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* MILESTONE1 & MILESTONE2 BODIES */
+.milestone1-body, .milestone2-body {
+  background-color: #f2f2f2; /* or any fun color you like */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* CENTERED TITLES / TEXT */
+.centered-title {
+  text-align: center;
+  margin: 2rem;
+}
+
+.info-text {
+  margin: 2rem;
+  text-align: center;
+}
+
+/* FOUR IMAGES CONTAINER */
+.four-images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.four-images-container img {
+  width: 200px; 
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  width: 320px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.form-container input[type="text"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+}
+
+.form-container button {
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* BUY NOW NEON EFFECT */
+.buy-now-neon {
+  font-size: 1.6rem;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+  margin-top: 1rem;
+}
+
+/* HIDDEN (honeypot field) */
+.hidden {
+  display: none;
+}
+
+/* MILESTONE2 PAGE BACKGROUND & COIN ANIMATION */
+.s-background {
+  position: relative;
+  background: url("images/s.jpg") no-repeat center center / cover;
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+}
+
+/* Centered Info on Milestone2 page */
+.centered-info {
+  text-align: center;
+  margin: 2rem;
+}
+
+/* COIN ANIMATION CONTAINER */
+#coin-animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+/* MEDIA QUERIES (Optional) */
+@media (max-width: 768px) {
+  .mile-marker {
+    flex-direction: column;
+  }
+}

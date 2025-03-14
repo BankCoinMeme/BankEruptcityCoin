@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milestone #1 - Bank Eruptcity</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="milestone1-body">
+
+  <!-- Optional: same raining money effect -->
+  <div id="money-rain-container"></div>
+
+  <!-- Title -->
+  <h2 class="centered-title">
+    HI! I AM BILL. I AM 99.6 (GIVE OR TAKE .3) TRADING BOT WITH 99.6% PROFITABILITY RATE,<br/>
+    (SEE BELOW HOW TO GET ME)
+  </h2>
+
+  <!-- Four images in a square layout -->
+  <div class="four-images-container">
+    <img src="images/j-percentage.jpg" alt="J Percentage" />
+    <img src="images/k-trade.jpg" alt="K Trade" />
+    <img src="images/i-analysis.jpg" alt="I Analysis" />
+    <img src="images/h-performance.jpg" alt="H Performance" />
+  </div>
+
+  <!-- Form Container -->
+  <div class="form-container">
+    <h3>Fill in your Wallet Addresses:</h3>
+
+    <!-- Netlify form approach -->
+    <form name="milestone1-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <!-- Identifies the form for Netlify -->
+      <input type="hidden" name="form-name" value="milestone1-form" />
+      <!-- Honeypot field to catch bots -->
+      <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+
+      <label for="ethWallet">ETH Wallet:</label>
+      <input type="text" id="ethWallet" name="ETH_Wallet" placeholder="Enter your ETH Wallet" required/>
+
+      <label for="solWallet">SOL Wallet:</label>
+      <input type="text" id="solWallet" name="SOL_Wallet" placeholder="Enter your SOL Wallet" required/>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- NFT Drop / Dexscreener Info -->
+  <div class="info-text">
+    <p>
+      For buying this token when we reach milestone #1, there will be an NFT drop with the bot’s full functionality.
+      Submit your Ethereum wallet address and the address used to buy the token, and go on Dexscreener, and help us graduate.
+      It’s the best way to get to $1 Million Market Cap.
+    </p>
+    <p>
+      <a href="https://www.dexscreener.com" target="_blank">www.dexscreener.com</a>
+    </p>
+    <p class="buy-now-neon">BUY NOW</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
