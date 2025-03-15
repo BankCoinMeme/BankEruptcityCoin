@@ -1,0 +1,72 @@
+/* General Roadmap Styling */
+.roadmap-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.roadmap-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.roadmap-img {
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.milestone {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 700px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.milestone.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.milestone img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+/* Money Falling Animation */
+@keyframes moneyFall {
+    from { transform: translateY(-100px); opacity: 1; }
+    to { transform: translateY(100vh); opacity: 0; }
+}
+
+.money {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    animation: moneyFall 5s linear infinite;
+}
