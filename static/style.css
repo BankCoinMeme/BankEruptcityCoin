@@ -1,0 +1,100 @@
+/* General Page Styling */
+body {
+    background-color: #B08D57; /* Matching the color of road.png */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+/* Team Section Styling */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.team-left, .team-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.team-member img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.team-member p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Roadmap Section */
+.roadmap {
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.roadmap-img {
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+.milestone {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.milestone img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+/* Money Falling Animation */
+@keyframes moneyFall {
+    from { transform: translateY(-100px); opacity: 1; }
+    to { transform: translateY(100vh); opacity: 0; }
+}
+
+.money {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    animation: moneyFall 5s linear infinite;
+}

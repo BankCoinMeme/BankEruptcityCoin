@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Eruptcity</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes moneyFall {
+            from { transform: translateY(-100px); opacity: 1; }
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+        .money {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            animation: moneyFall 5s linear infinite;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+        .team-left, .team-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-member {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .team-member img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .team-member p {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .final-message {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 50px 0;
+        }
+        .final-message a {
+            color: gold;
+            text-decoration: none;
+        }
+        .final-message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Bank Eruptcity!</h1>
+    <p>We made this coin for anyone who is in need of money right now. So see our road map to find the direction to the bank.</p>
+    
+    <div class="team-container">
+        <div class="team-left">
+            <div class="team-member">
+                <p>CREATOR</p>
+                <img src="images/C-v.jpg" alt="Creator">
+                <a href="https://www.linkedin.com/in/vitalik-buterin-267a7450/">LinkedIn</a>
+            </div>
+            <div class="team-member">
+                <p>CO-CREATOR</p>
+                <img src="images/D-g.jpg" alt="Co-Creator">
+                <a href="https://www.linkedin.com/in/gavin-wood-22b6a41a3/?originalSubdomain=uk">LinkedIn</a>
+            </div>
+        </div>
+        
+        <img src="images/A-bank.jpg" alt="Bank Image" class="centered">
+        
+        <div class="team-right">
+            <div class="team-member">
+                <p>CTO</p>
+                <img src="images/E-w.jpg" alt="CTO">
+                <a href="https://www.linkedin.com/in/wernervogels/">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="roadmap">
+        <h2>Roadmap</h2>
+        <img src="images/road.png" alt="Roadmap" class="roadmap-img centered">
+        
+        <div class="milestone">
+            <h3>Mile Stone 1 - $1 Million Market Cap</h3>
+            <img src="images/F-ai.jpg" alt="Trading Bot">
+            <p>96.88% Profit Rate Trading Bot</p>
+            <a href="milestone1.html" class="button">Click here for access</a>
+        </div>
+
+        <div class="milestone">
+            <h3>Mile Stone 2 - $2 Million Market Cap</h3>
+            <img src="images/G-airdrop.jpg" alt="USDC Airdrop">
+            <p>Free USDC AIR DROP at 2 Million Market Cap</p>
+            <a href="milestone2.html" class="button">Click for more information</a>
+        </div>
+        
+        <div class="milestone">
+            <h3>Mile Stone 3 - $3 Million Market Cap</h3>
+            <img src="images/B-bot.jpg" alt="Virtual Agent">
+            <p>I am a Virtual Agent that can predict future stock/crypto prices. As an LLVM Model, I need to learn first, so buy Bank Eruptcity Coin and use the 96.88% trading strategy bot so I can learn.</p>
+        </div>
+    </div>
+
+    <div class="final-message">
+        <p>BANK ERUPTCITY IS A CITY FOR ALL, BUT FIRST WE NEED TO BUILD IT.<br/>
+        GO TO <a href="https://www.dexscreener.com" target="_blank">WWW.DEXSCREENER.COM</a> AND BUY BANK ERUPTCITY COIN (BEC), SO IT GRADUATES AND CAN BE A BANK FOR THOSE WHO NEED THE MONEY.</p>
+    </div>
+    
+    <script>
+        function createMoneyAnimation() {
+            for (let i = 0; i < 15; i++) {
+                let money = document.createElement("img");
+                money.src = "images/money.png";
+                money.className = "money";
+                money.style.left = Math.random() * 100 + "vw";
+                money.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(money);
+                setTimeout(() => { money.remove(); }, 5000);
+            }
+        }
+        setInterval(createMoneyAnimation, 1000);
+    </script>
+</body>
+</html>

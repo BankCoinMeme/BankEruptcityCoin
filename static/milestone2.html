@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone 2 - USDC Airdrop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/s.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        @keyframes coinFall {
+            from { transform: translateY(-100px); opacity: 1; }
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+        .coin {
+            position: absolute;
+            width: 40px;
+            height: auto;
+            animation: coinFall 5s linear infinite;
+        }
+        .announcement {
+            margin-top: 30vh;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .form-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .form-container label, .form-container input, .form-container button {
+            display: block;
+            margin: 10px auto;
+            font-size: 18px;
+        }
+        .form-container input {
+            padding: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: gold;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createCoinAnimation() {
+            for (let i = 0; i < 20; i++) {
+                let coin = document.createElement("img");
+                coin.src = "images/coin.png";
+                coin.className = "coin";
+                coin.style.left = Math.random() * 100 + "vw";
+                coin.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(coin);
+                setTimeout(() => { coin.remove(); }, 5000);
+            }
+        }
+        setInterval(createCoinAnimation, 1000);
+    </script>
+
+    <div class="announcement">
+        <h1>ANYONE WHO HOLDS THIS COIN DURING THE SNAPSHOT WHEN WE REACH $2,000,000 MARKET CAP WILL RECEIVE AN AIRDROP OF 1/100000 FOR EACH BANK ERUPTCITY YOU HOLD</h1>
+    </div>
+    
+    <div class="form-container">
+        <h2>Add ETH Wallet Where You Want Your USDC Airdrop</h2>
+        <form action="mailto:apexhomebuilderllc@gmail.com" method="post" enctype="text/plain">
+            <label for="eth-wallet">ETH Wallet Address:</label>
+            <input type="text" id="eth-wallet" name="eth-wallet" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
