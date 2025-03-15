@@ -1,0 +1,21 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Roadmap from "./components/Roadmap";
+import Milestone1 from "./components/Milestone1";
+import Milestone2 from "./components/Milestone2";
+import Milestone3 from "./components/Milestone3";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Roadmap />} />
+        <Route path="/milestone1" element={<Milestone1 />} />
+        <Route path="/milestone2" element={<Milestone2 />} />
+        <Route path="/milestone3" element={<Milestone3 />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
